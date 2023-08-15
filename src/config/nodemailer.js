@@ -14,16 +14,14 @@ const transport = nodemailer.createTransport({
 
 // send mail with defined transport object
 const sendMailToUser = async(userMail,token)=>{
-    console.log("========",token)
     let info = await transport.sendMail({
     from: 'admin@vet.com',
     to: userMail,
     subject: "Verifica tu cuenta de correo electrónico",
     html: `
-    <h1>Sistema de gestión (VET-Hola 🐶 😺)</h1>
+    <h1>Sistema de gestión (VET-ESFOT 🐶 😺)</h1>
     <hr>
-    <a href="https://plantilla-app-demo.vercel.app/confirmar/${token}">Clic para confirmar tu cuenta</a>v
-    
+    <a href="http://localhost:5173/confirmar/${token}">Clic para confirmar tu cuenta</a>
     <hr>
     <footer>Grandote te da la Bienvenida!</footer>
     `
