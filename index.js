@@ -1,5 +1,5 @@
-import app from './src/server'
-import connection from './src/database';
+import app from './src/server.js'
+import connection from './src/database.js';
 
 
 
